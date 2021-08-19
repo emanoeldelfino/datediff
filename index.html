@@ -13,21 +13,27 @@
             <input id="date1" type="date">
             <input id="date2" type="date">
             <select name="time-unit" id="time-unit">
+                <option value="Picoseconds">Picoseconds</option>
                 <option value="Nanoseconds">Nanoseconds</option>
+                <option value="Microseconds">Microseconds</option>
                 <option value="Milliseconds">Milliseconds</option>
                 <option value="Seconds">Seconds</option>
                 <option value="Minutes">Minutes</option>
                 <option value="Hours">Hours</option>
-                <option value="Days">Days</option>
+                <option value="Days" Selected>Days</option>
+                <option value="Weeks">Weeks</option>
+                <option value="Months">Months</option>
                 <option value="Years">Years</option>
+                <option value="Decades">Decades</option>
                 <option value="Centuries">Centuries</option>
             </select>
         </form>
-        <span id="diff">Difference (years, months, weeks, days) </span>
+        <span id="years">Years: </span>
+        <span id="months">Months: </span>
+        <span id="weeks">Weeks: </span>
+        <span id="days">Days: </span>
         <span id="converted">Converted to selected unit: </span>
     </main>
     <script src="./app.js"></script>
 </body>
 </html>
-
-
