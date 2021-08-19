@@ -42,6 +42,10 @@ function getYearsMonthsWeeksDays(seconds) {
 }
 
 const conversionSecs = {
+	yoctosecond: 1 / 10 ** 24,
+	zeptosecond: 1 / 10 ** 21,
+	attosecon: 1 / 10 ** 18,
+	femtosecond: 1 / 10 ** 15,
 	picoseconds: 1 / 10 ** 12,
 	nanoseconds: 1 / 10 ** 9,
 	microseconds: 1 / 10 ** 6,
@@ -55,9 +59,16 @@ const conversionSecs = {
 	years: (60 ** 2 * 24 * 365),
 	decades: (60 ** 2 * 24 * 365 * 10),
 	centuries: (60 ** 2 * 24 * 365 * 100),
+	millennium: (60 ** 2 * 24 * 365 * 1000),
+	megayear: (60 ** 2 * 24 * 365 * 10 ** 6),
+	gigayear: (60 ** 2 * 24 * 365 * 10 ** 9),
 }
 
 const convertSecs2 = {
+	yoctoseconds: secs => secs * 10 ** 24,
+	zeptoseconds: secs => secs * 10 ** 21,
+	attoseconds: secs => secs * 10 ** 18,
+	femtoseconds: secs => secs * 10 ** 15,
 	picoseconds: secs => secs * 10 ** 12,
 	nanoseconds: secs => secs * 10 ** 9,
 	microseconds: secs => secs * 10 ** 6,
@@ -69,11 +80,18 @@ const convertSecs2 = {
 	weeks: secs => secs / (60 ** 2 * 24 * 7),
 	months: secs => secs / (60 ** 2 * 24 * 30),
 	years: secs => secs / (60 ** 2 * 24 * 365),
-	decades: secs => secs / (60 ** 2 * 24 * 365 * 10),
-	centuries: secs => secs / (60 ** 2 * 24 * 365 * 100),
+	decades: secs => secs / (60 ** 2 * 24 * 365 * 10 ** 1),
+	centuries: secs => secs / (60 ** 2 * 24 * 365 * 10 ** 2),
+	millennium: secs => secs / (60 ** 2 * 24 * 365 * 10 ** 3),
+	megayear: secs => secs / (60 ** 2 * 24 * 365 * 10 ** 6),
+	gigayear: secs => secs / (60 ** 2 * 24 * 365 * 10 ** 9),
 }
 
 const convert2Secs = {
+	yoctosecond: unit => unit / 10 ** 24,
+	zeptosecond: unit => unit / 10 ** 21,
+	attosecon: unit => unit / 10 ** 18,
+	femtosecond: unit => unit / 10 ** 15,
 	picoseconds: unit => unit / 10 ** 12,
 	nanoseconds: unit => unit / 10 ** 9,
 	microseconds: unit => unit / 10 ** 6,
@@ -87,4 +105,7 @@ const convert2Secs = {
 	years: unit => unit * (60 ** 2 * 24 * 365),
 	decades: unit => unit * (60 ** 2 * 24 * 365 * 10),
 	centuries: unit => unit * (60 ** 2 * 24 * 365 * 100),
+	millennium: unit => unit * (60 ** 2 * 24 * 365 * 1000),
+	megayear:  unit => unit * (60 ** 2 * 24 * 365 * 10 ** 6),
+	gigayear:  unit => unit * (60 ** 2 * 24 * 365 * 10 ** 9),
 }
