@@ -1,24 +1,28 @@
-const date1Elem = document.querySelector("#date1");
-const date2Elem = document.querySelector("#date2");
-const convertUnitElem = document.querySelector("#time-unit");
-const spanConverted = document.querySelector("#converted");
+const startDate = document.querySelector("#start-date");
+const endDate = document.querySelector("#end-date");
+const dateUnitSelect = document.querySelector(".date-unit-select");
+const selectedDateUnit = document.querySelector("#selected-date-unit");
 
 function capitalizeFirstLetter(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-[date1Elem, date2Elem, convertUnitElem].forEach(elem => {
+[startDate, endDate, dateUnitSelect].forEach(elem => {
 	elem.addEventListener('change', () => {
-		const date1 = new Date(date1Elem.value);
-		const date2 = new Date(date2Elem.value);
+		const date1 = new Date(startDate.value);
+		const date2 = new Date(endDate.value);
 
-		if (date1Elem.value && date2Elem.value) {
-			const convertUnit = convertUnitElem.value.toLowerCase();
+		const convertUnit = dateUnitSelect.value;
+
+		selectedDateUnit.innerText = `${convertUnit}:`;
+		
+		if (startDate.value && endDate.value) {
 			const diffMs = Math.abs(date1.getTime() - date2.getTime());
 			const diffSecs = convert2Secs.milliseconds(diffMs);
-			console.log(convertUnit);
-			const diffUnit = convertSecs2[convertUnit](diffSecs);
-			spanConverted.innerText = `Difference of ${diffUnit} ${convertUnit}.`;
+			const diffUnit = convertSecs2[convertUnit.toLowerCase()](diffSecs);
+
+			selectedDateUnit.innerText += ` ${diffUnit}`;
+			
 			const yearsMonthsWeeksDays = getYearsMonthsWeeksDays(diffSecs);
 
 			for (const [key, value] of Object.entries(yearsMonthsWeeksDays)) {

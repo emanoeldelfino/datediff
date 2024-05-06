@@ -13,18 +13,57 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     width: 100vw;
     height: 100vh;
-    flex-direction: column;
-    gap: 30px;
+    gap: 50px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
 }
 
-#date-form {
+.date-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#date1, #date2 {
-    max-width: 150px;
+.date-units {
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
+
+.date {
+    width: 120px;
+}
+
+.date-unit-select {
+    width: 134px;
+}
+
+.date, .date-unit-select {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.date-container, .date-unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.date-container label, .date-unit label {
+    width: 120px;
+    text-align: center;
+}
+
+.date-units span {
+    width: 400px;
 }
