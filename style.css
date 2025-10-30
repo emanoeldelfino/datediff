@@ -41,7 +41,7 @@ footer {
     gap: 10px;
     font-size: 20px;
     font-weight: bold;
-    width: 200px;
+    width: 300px; /* Increased width for results */
 }
 
 .date {
@@ -49,13 +49,31 @@ footer {
 }
 
 .date-unit-select {
-    width: 134px;
+    width: 150px; /* Adjusted width */
 }
 
 .date, .date-unit-select {
     font-size: 15px;
     padding: 5px;
 }
+
+/* Added styles for the multi-select */
+.date-unit-select[multiple] {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    padding: 5px;
+}
+
+.date-unit-select[multiple] option {
+    padding: 5px;
+}
+
+.date-unit-select[multiple] option:checked {
+    background-color: #007bff;
+    color: white;
+}
+
 
 .date-container, .date-unit {
     display: flex;
