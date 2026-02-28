@@ -10,30 +10,33 @@
 </head>
 <body>
     <main>
-        <form class="date-form">
-            <div class="date-container">
-                <label for="start-date">Start date:</label>
-                <input id="start-date" class="date" type="date" name="start-date">
+        <div class="glass-container">
+            <form class="date-form">
+                <div class="date-container">
+                    <label for="start-date">Start date</label>
+                    <input id="start-date" class="date" type="date" name="start-date">
+                </div>
+                <div class="date-container">
+                    <label for="end-date">End date</label>
+                    <input id="end-date" class="date" type="date" name="end-date">
+                </div>
+                <div class="date-unit">
+                    <label for="date-unit-select">Units to display</label>
+                    <select name="time-unit" class="date-unit-select" id="date-unit-select" multiple size="8">
+                        <option value="Milliseconds">Milliseconds</option>
+                        <option value="Seconds">Seconds</option>
+                        <option value="Minutes">Minutes</option>
+                        <option value="Hours">Hours</option>
+                        <option value="Days" selected>Days</option>
+                        <option value="Weeks">Weeks</option>
+                        <option value="Months">Months</option>
+                        <option value="Years">Years</option>
+                    </select>
+                </div>
+            </form>
+            <div class="date-units">
+                <p class="placeholder-text">Select both dates to see the difference.</p>
             </div>
-            <div class="date-container">
-                <label for="end-date">End date:</label>
-                <input id="end-date" class="date" type="date" name="end-date">
-            </div>
-            <div class="date-unit">
-                <label for="date-unit-select">Select units:</label>
-                <select name="time-unit" class="date-unit-select" multiple size="8">
-                    <option value="Milliseconds">Milliseconds</option>
-                    <option value="Seconds">Seconds</option>
-                    <option value="Minutes">Minutes</option>
-                    <option value="Hours">Hours</option>
-                    <option value="Days">Days</option>
-                    <option value="Weeks">Weeks</option>
-                    <option value="Months">Months</option>
-                    <option value="Years">Years</option>
-                </select>
-            </div>
-        </form>
-        <div class="date-units">
         </div>
     </main>
     <footer>
